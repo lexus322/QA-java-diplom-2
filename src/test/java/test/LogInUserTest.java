@@ -45,8 +45,7 @@ public class LogInUserTest extends BaseUserTest {
     @After
     public void deleteUser() {
 
-        if (userAction.getUserToken(userCard) == null) {
-        } else {
+        if (userAction.getUserToken(userCard) != null) {
             userAction.deleteRequestRemoveUser(userCard);
         }
     }
